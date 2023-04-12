@@ -4,12 +4,12 @@ const {
   loginUser,
   logoutUser,
   getCurrentUser,
-} = require("../../controllers/authController");
+} = require("../../controllers/auth/index");
 const {
   checkRegisterUserData,
   checkLoginUserData,
   protect,
-} = require("../../middlewares/authMiddlewares");
+} = require("../../middlewares/auth/index");
 
 const catchAsync = require("../../utils/catchAsync");
 

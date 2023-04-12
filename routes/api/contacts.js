@@ -6,14 +6,14 @@ const {
   deleteContact,
   updateContact,
   updateStatusContact,
-} = require("../../controllers/controllers");
-const { protect } = require("../../middlewares/authMiddlewares");
+} = require("../../controllers/contacts/index");
+const { protect } = require("../../middlewares/auth/index");
 const {
   checkCreateContactData,
   checkUpdateContactData,
   checkUpdateFavoriteContact,
   checkContactId,
-  } = require("../../middlewares/middlewares");
+  } = require("../../middlewares/contacts/index");
 
 const catchAsync = require("../../utils/catchAsync");
 
