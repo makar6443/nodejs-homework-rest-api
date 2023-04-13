@@ -1,7 +1,7 @@
 const { User } = require("../../models/users");
 const { signToken } = require("./signToken");
 
-const loginUser = async (req, res, next) => {
+const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email }).select("+password");

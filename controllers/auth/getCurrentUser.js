@@ -1,4 +1,4 @@
-const getCurrentUser = async (req, res, next) => {
+const getCurrentUser = async (req, res) => {
   const currentUser = req.user;
   return res
     .status(200)
