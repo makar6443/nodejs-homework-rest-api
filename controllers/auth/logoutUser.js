@@ -1,4 +1,4 @@
-const logoutUser = async (req, res, next) => {
+const logoutUser = async (req, res) => {
   const user = req.user;
 
   user.setToken(null);

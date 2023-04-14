@@ -1,6 +1,6 @@
 const { User } = require("../../models/users");
 
-const registerUser = async (req, res, next) => {
+const registerUser = async (req, res) => {
   const newUser = await User.create(req.body);
 
   newUser.password = undefined;

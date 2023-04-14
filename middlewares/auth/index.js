@@ -1,9 +1,10 @@
 const { checkRegisterUserData } = require("./checkRegisterUserData");
 const { checkLoginUserData } = require("./checkLoginUserData");
-const { protect } = require("./protect");
+const { protect, uploadUserPhoto } = require("./protect");
 
 module.exports = {
   checkRegisterUserData,
   checkLoginUserData,
-  protect
+  protect,
+  uploadUserPhoto
 }

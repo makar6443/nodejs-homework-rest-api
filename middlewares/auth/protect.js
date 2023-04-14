@@ -4,6 +4,8 @@ const { User } = require("../../models/users");
 const catchAsync = require("../../utils/catchAsync");
 dotenv.config({ path: "./.env" });
 
+const ImageService = require("../../services/imageService");
+
 const protect = catchAsync(async (req, res, next) => {
   const token =
     req.headers.authorization?.startsWith("Bearer") &&
@@ -25,6 +27,9 @@ const protect = catchAsync(async (req, res, next) => {
   next();
 });
 
+const uploadUserPhoto = ImageService.upload("avatar");
+
 module.exports = {
-	protect
+  protect,
+  uploadUserPhoto
 }
