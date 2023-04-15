@@ -9,6 +9,11 @@ const checkLoginUserData = catchAsync(async (req, res, next) => {
   const userExists = await User.exists({ email: value.email });
   if (!userExists)
     return res.status(400).json({ message: error.details[0].message });
+  if (!value.verify) {
+    return res
+      .status(401)
+      .json({ message: "The user has not confirmed themselves via email." });
+  }
   req.body = value;
   next();
 });
