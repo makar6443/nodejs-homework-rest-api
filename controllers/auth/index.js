@@ -3,7 +3,9 @@ const { registerUser } = require("./registerUser");
 const { loginUser } = require("./loginUser");
 const { logoutUser } = require("./logoutUser");
 const { getCurrentUser } = require("./getCurrentUser");
-const { updateAvatars } = require("./updateAvatars")
+const { updateAvatars } = require("./updateAvatars");
+const { verifyUser } = require("./verifyUser");
+const { verificationToken } = require("./verificationToken");
 
 module.exports = {
   signToken,
@@ -11,5 +13,7 @@ module.exports = {
   loginUser,
   logoutUser,
   getCurrentUser,
-  updateAvatars
+  updateAvatars,
+  verifyUser,
+  verificationToken
 }
